@@ -1,0 +1,6 @@
+framework module UpArpuSDK {
+  umbrella header "UpArpuSDK.h"
+
+  export *
+  module * { export * }
+}

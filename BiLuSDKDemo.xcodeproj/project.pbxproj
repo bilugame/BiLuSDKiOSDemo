@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		373B1538235E9FAF00E7DF4F /* UpArpuGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */; };
+		373B1539235E9FAF00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */; };
+		373B153A235E9FAF00E7DF4F /* UpArpuGDTBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */; };
+		373B153C235EA01A00E7DF4F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B153B235EA01A00E7DF4F /* CoreLocation.framework */; };
+		373B153E235EA02400E7DF4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B153D235EA02400E7DF4F /* QuartzCore.framework */; };
+		373B1540235EA02D00E7DF4F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B153F235EA02D00E7DF4F /* libxml2.tbd */; };
+		37B0D1EB2351A6820034A81A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0D1EA2351A6820034A81A /* AppDelegate.m */; };
+		37B0D1EE2351A6820034A81A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0D1ED2351A6820034A81A /* ViewController.m */; };
+		37B0D1F12351A6820034A81A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0D1EF2351A6820034A81A /* Main.storyboard */; };
+		37B0D1F32351A6830034A81A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0D1F22351A6830034A81A /* Assets.xcassets */; };
+		37B0D1F62351A6830034A81A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0D1F42351A6830034A81A /* LaunchScreen.storyboard */; };
+		37B0D1F92351A6830034A81A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0D1F82351A6830034A81A /* main.m */; };
+		37B0D2032351A6830034A81A /* BiLuSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0D2022351A6830034A81A /* BiLuSDKDemoTests.m */; };
+		37B0D2552351A7380034A81A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2542351A7380034A81A /* MobileCoreServices.framework */; };
+		37B0D2572351A73F0034A81A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2562351A73F0034A81A /* WebKit.framework */; };
+		37B0D2592351A7480034A81A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2582351A7470034A81A /* MediaPlayer.framework */; };
+		37B0D25B2351A74E0034A81A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D25A2351A74E0034A81A /* CoreMedia.framework */; };
+		37B0D25D2351A7550034A81A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D25C2351A7550034A81A /* AVFoundation.framework */; };
+		37B0D25F2351A7600034A81A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D25E2351A7600034A81A /* CoreTelephony.framework */; };
+		37B0D2612351A7670034A81A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2602351A7660034A81A /* SystemConfiguration.framework */; };
+		37B0D2632351A7710034A81A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2622351A7710034A81A /* AdSupport.framework */; };
+		37B0D2652351A77A0034A81A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2642351A77A0034A81A /* CoreMotion.framework */; };
+		37B0D2672351A7830034A81A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2662351A7830034A81A /* libz.tbd */; };
+		37B0D2692351A78B0034A81A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2682351A78B0034A81A /* libc++.tbd */; };
+		37B0D26B2351A7930034A81A /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D26A2351A7930034A81A /* libresolv.9.tbd */; };
+		37EE50682351B488007FB338 /* BiLuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50432351B488007FB338 /* BiLuSDK.framework */; };
+		37EE50692351B488007FB338 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50462351B488007FB338 /* ShareSDKConnector.framework */; };
+		37EE506A2351B488007FB338 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EE50472351B488007FB338 /* ShareSDK.bundle */; };
+		37EE506B2351B488007FB338 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50482351B488007FB338 /* MOBFoundation.framework */; };
+		37EE506C2351B488007FB338 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50492351B488007FB338 /* ShareSDK.framework */; };
+		37EE506D2351B488007FB338 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EE504B2351B488007FB338 /* ShareSDKUI.bundle */; };
+		37EE506E2351B488007FB338 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE504C2351B488007FB338 /* ShareSDKExtension.framework */; };
+		37EE506F2351B488007FB338 /* MobLinkPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE504D2351B488007FB338 /* MobLinkPro.framework */; };
+		37EE50702351B488007FB338 /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE504E2351B488007FB338 /* ShareSDKUI.framework */; };
+		37EE50712351B488007FB338 /* QQConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50502351B488007FB338 /* QQConnector.framework */; };
+		37EE50722351B488007FB338 /* WechatConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50512351B488007FB338 /* WechatConnector.framework */; };
+		37EE50732351B488007FB338 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50532351B488007FB338 /* BUAdSDK.framework */; };
+		37EE50742351B488007FB338 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50542351B488007FB338 /* GoogleAppMeasurement.framework */; };
+		37EE50752351B488007FB338 /* NanoPB-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 37EE50562351B488007FB338 /* NanoPB-LICENSE */; };
+		37EE50762351B488007FB338 /* OpenMeasurement-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 37EE50572351B488007FB338 /* OpenMeasurement-LICENSE */; };
+		37EE50772351B488007FB338 /* GoogleUtilities-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 37EE50582351B488007FB338 /* GoogleUtilities-LICENSE */; };
+		37EE50782351B488007FB338 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50592351B488007FB338 /* GoogleUtilities.framework */; };
+		37EE50792351B488007FB338 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE505A2351B488007FB338 /* nanopb.framework */; };
+		37EE507A2351B488007FB338 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE505B2351B488007FB338 /* GoogleMobileAds.framework */; };
+		37EE507B2351B488007FB338 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EE505C2351B488007FB338 /* BUAdSDK.bundle */; };
+		37EE507C2351B488007FB338 /* UpArpuAdmobInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE505E2351B488007FB338 /* UpArpuAdmobInterstitialAdapter.framework */; };
+		37EE507D2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE505F2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework */; };
+		37EE507E2351B488007FB338 /* UpArpuBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50602351B488007FB338 /* UpArpuBanner.framework */; };
+		37EE507F2351B488007FB338 /* UpArpuInterstitial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50612351B488007FB338 /* UpArpuInterstitial.framework */; };
+		37EE50802351B488007FB338 /* UpArpuRewardedVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50622351B488007FB338 /* UpArpuRewardedVideo.framework */; };
+		37EE50812351B488007FB338 /* UpArpuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50632351B488007FB338 /* UpArpuSDK.framework */; };
+		37EE50822351B488007FB338 /* UpArpuTTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50642351B488007FB338 /* UpArpuTTInterstitialAdapter.framework */; };
+		37EE50832351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50652351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework */; };
+		37EE50842351B488007FB338 /* UpArpuAdmobBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50662351B488007FB338 /* UpArpuAdmobBannerAdapter.framework */; };
+		37EE50852351B488007FB338 /* UpArpuTTBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50672351B488007FB338 /* UpArpuTTBannerAdapter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37B0D1FF2351A6830034A81A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37B0D1DE2351A6820034A81A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37B0D1E52351A6820034A81A;
+			remoteInfo = BiLuSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTInterstitialAdapter.framework; sourceTree = "<group>"; };
+		373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTBannerAdapter.framework; sourceTree = "<group>"; };
+		373B153B235EA01A00E7DF4F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		373B153D235EA02400E7DF4F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		373B153F235EA02D00E7DF4F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiLuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B0D1E92351A6820034A81A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37B0D1EA2351A6820034A81A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37B0D1EC2351A6820034A81A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		37B0D1ED2351A6820034A81A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37B0D1F02351A6820034A81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37B0D1F22351A6830034A81A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37B0D1F52351A6830034A81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37B0D1F72351A6830034A81A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B0D1F82351A6830034A81A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37B0D1FE2351A6830034A81A /* BiLuSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiLuSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B0D2022351A6830034A81A /* BiLuSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiLuSDKDemoTests.m; sourceTree = "<group>"; };
+		37B0D2042351A6830034A81A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B0D2542351A7380034A81A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		37B0D2562351A73F0034A81A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		37B0D2582351A7470034A81A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		37B0D25A2351A74E0034A81A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		37B0D25C2351A7550034A81A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		37B0D25E2351A7600034A81A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		37B0D2602351A7660034A81A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37B0D2622351A7710034A81A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		37B0D2642351A77A0034A81A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		37B0D2662351A7830034A81A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		37B0D2682351A78B0034A81A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		37B0D26A2351A7930034A81A /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		37EE50432351B488007FB338 /* BiLuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BiLuSDK.framework; sourceTree = "<group>"; };
+		37EE50462351B488007FB338 /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
+		37EE50472351B488007FB338 /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
+		37EE50482351B488007FB338 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		37EE50492351B488007FB338 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
+		37EE504B2351B488007FB338 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
+		37EE504C2351B488007FB338 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
+		37EE504D2351B488007FB338 /* MobLinkPro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobLinkPro.framework; sourceTree = "<group>"; };
+		37EE504E2351B488007FB338 /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
+		37EE50502351B488007FB338 /* QQConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QQConnector.framework; sourceTree = "<group>"; };
+		37EE50512351B488007FB338 /* WechatConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WechatConnector.framework; sourceTree = "<group>"; };
+		37EE50532351B488007FB338 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
+		37EE50542351B488007FB338 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		37EE50562351B488007FB338 /* NanoPB-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NanoPB-LICENSE"; sourceTree = "<group>"; };
+		37EE50572351B488007FB338 /* OpenMeasurement-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenMeasurement-LICENSE"; sourceTree = "<group>"; };
+		37EE50582351B488007FB338 /* GoogleUtilities-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GoogleUtilities-LICENSE"; sourceTree = "<group>"; };
+		37EE50592351B488007FB338 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		37EE505A2351B488007FB338 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		37EE505B2351B488007FB338 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		37EE505C2351B488007FB338 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
+		37EE505E2351B488007FB338 /* UpArpuAdmobInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuAdmobInterstitialAdapter.framework; sourceTree = "<group>"; };
+		37EE505F2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuTTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		37EE50602351B488007FB338 /* UpArpuBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuBanner.framework; sourceTree = "<group>"; };
+		37EE50612351B488007FB338 /* UpArpuInterstitial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuInterstitial.framework; sourceTree = "<group>"; };
+		37EE50622351B488007FB338 /* UpArpuRewardedVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuRewardedVideo.framework; sourceTree = "<group>"; };
+		37EE50632351B488007FB338 /* UpArpuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuSDK.framework; sourceTree = "<group>"; };
+		37EE50642351B488007FB338 /* UpArpuTTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuTTInterstitialAdapter.framework; sourceTree = "<group>"; };
+		37EE50652351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuAdmobRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		37EE50662351B488007FB338 /* UpArpuAdmobBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuAdmobBannerAdapter.framework; sourceTree = "<group>"; };
+		37EE50672351B488007FB338 /* UpArpuTTBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuTTBannerAdapter.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37B0D1E32351A6820034A81A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373B1540235EA02D00E7DF4F /* libxml2.tbd in Frameworks */,
+				373B153E235EA02400E7DF4F /* QuartzCore.framework in Frameworks */,
+				373B153C235EA01A00E7DF4F /* CoreLocation.framework in Frameworks */,
+				37EE507A2351B488007FB338 /* GoogleMobileAds.framework in Frameworks */,
+				37EE50722351B488007FB338 /* WechatConnector.framework in Frameworks */,
+				37B0D26B2351A7930034A81A /* libresolv.9.tbd in Frameworks */,
+				37B0D2692351A78B0034A81A /* libc++.tbd in Frameworks */,
+				37B0D2672351A7830034A81A /* libz.tbd in Frameworks */,
+				373B1538235E9FAF00E7DF4F /* UpArpuGDTInterstitialAdapter.framework in Frameworks */,
+				373B153A235E9FAF00E7DF4F /* UpArpuGDTBannerAdapter.framework in Frameworks */,
+				37EE507C2351B488007FB338 /* UpArpuAdmobInterstitialAdapter.framework in Frameworks */,
+				37EE50792351B488007FB338 /* nanopb.framework in Frameworks */,
+				37B0D2652351A77A0034A81A /* CoreMotion.framework in Frameworks */,
+				373B1539235E9FAF00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */,
+				37EE506C2351B488007FB338 /* ShareSDK.framework in Frameworks */,
+				37EE50822351B488007FB338 /* UpArpuTTInterstitialAdapter.framework in Frameworks */,
+				37EE507F2351B488007FB338 /* UpArpuInterstitial.framework in Frameworks */,
+				37EE50732351B488007FB338 /* BUAdSDK.framework in Frameworks */,
+				37B0D2632351A7710034A81A /* AdSupport.framework in Frameworks */,
+				37EE50782351B488007FB338 /* GoogleUtilities.framework in Frameworks */,
+				37EE50832351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework in Frameworks */,
+				37EE507D2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */,
+				37B0D2612351A7670034A81A /* SystemConfiguration.framework in Frameworks */,
+				37EE50842351B488007FB338 /* UpArpuAdmobBannerAdapter.framework in Frameworks */,
+				37B0D25F2351A7600034A81A /* CoreTelephony.framework in Frameworks */,
+				37EE506F2351B488007FB338 /* MobLinkPro.framework in Frameworks */,
+				37EE50692351B488007FB338 /* ShareSDKConnector.framework in Frameworks */,
+				37EE50812351B488007FB338 /* UpArpuSDK.framework in Frameworks */,
+				37EE506B2351B488007FB338 /* MOBFoundation.framework in Frameworks */,
+				37EE50712351B488007FB338 /* QQConnector.framework in Frameworks */,
+				37EE50742351B488007FB338 /* GoogleAppMeasurement.framework in Frameworks */,
+				37B0D25D2351A7550034A81A /* AVFoundation.framework in Frameworks */,
+				37B0D25B2351A74E0034A81A /* CoreMedia.framework in Frameworks */,
+				37EE50682351B488007FB338 /* BiLuSDK.framework in Frameworks */,
+				37B0D2592351A7480034A81A /* MediaPlayer.framework in Frameworks */,
+				37EE50702351B488007FB338 /* ShareSDKUI.framework in Frameworks */,
+				37B0D2572351A73F0034A81A /* WebKit.framework in Frameworks */,
+				37EE50802351B488007FB338 /* UpArpuRewardedVideo.framework in Frameworks */,
+				37B0D2552351A7380034A81A /* MobileCoreServices.framework in Frameworks */,
+				37EE506E2351B488007FB338 /* ShareSDKExtension.framework in Frameworks */,
+				37EE50852351B488007FB338 /* UpArpuTTBannerAdapter.framework in Frameworks */,
+				37EE507E2351B488007FB338 /* UpArpuBanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37B0D1FB2351A6830034A81A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37B0D1DD2351A6820034A81A = {
+			isa = PBXGroup;
+			children = (
+				37B0D1E82351A6820034A81A /* BiLuSDKDemo */,
+				37B0D2012351A6830034A81A /* BiLuSDKDemoTests */,
+				37B0D1E72351A6820034A81A /* Products */,
+				37B0D2512351A71E0034A81A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37B0D1E72351A6820034A81A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */,
+				37B0D1FE2351A6830034A81A /* BiLuSDKDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37B0D1E82351A6820034A81A /* BiLuSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				37B0D1E92351A6820034A81A /* AppDelegate.h */,
+				37B0D1EA2351A6820034A81A /* AppDelegate.m */,
+				37EE50422351B488007FB338 /* BiLuSDK */,
+				37B0D1EC2351A6820034A81A /* ViewController.h */,
+				37B0D1ED2351A6820034A81A /* ViewController.m */,
+				37B0D1EF2351A6820034A81A /* Main.storyboard */,
+				37B0D1F22351A6830034A81A /* Assets.xcassets */,
+				37B0D1F42351A6830034A81A /* LaunchScreen.storyboard */,
+				37B0D1F72351A6830034A81A /* Info.plist */,
+				37B0D1F82351A6830034A81A /* main.m */,
+			);
+			path = BiLuSDKDemo;
+			sourceTree = "<group>";
+		};
+		37B0D2012351A6830034A81A /* BiLuSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				37B0D2022351A6830034A81A /* BiLuSDKDemoTests.m */,
+				37B0D2042351A6830034A81A /* Info.plist */,
+			);
+			path = BiLuSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		37B0D2512351A71E0034A81A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				373B153F235EA02D00E7DF4F /* libxml2.tbd */,
+				373B153D235EA02400E7DF4F /* QuartzCore.framework */,
+				373B153B235EA01A00E7DF4F /* CoreLocation.framework */,
+				37B0D26A2351A7930034A81A /* libresolv.9.tbd */,
+				37B0D2682351A78B0034A81A /* libc++.tbd */,
+				37B0D2662351A7830034A81A /* libz.tbd */,
+				37B0D2642351A77A0034A81A /* CoreMotion.framework */,
+				37B0D2622351A7710034A81A /* AdSupport.framework */,
+				37B0D2602351A7660034A81A /* SystemConfiguration.framework */,
+				37B0D25E2351A7600034A81A /* CoreTelephony.framework */,
+				37B0D25C2351A7550034A81A /* AVFoundation.framework */,
+				37B0D25A2351A74E0034A81A /* CoreMedia.framework */,
+				37B0D2582351A7470034A81A /* MediaPlayer.framework */,
+				37B0D2562351A73F0034A81A /* WebKit.framework */,
+				37B0D2542351A7380034A81A /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37EE50422351B488007FB338 /* BiLuSDK */ = {
+			isa = PBXGroup;
+			children = (
+				37EE50432351B488007FB338 /* BiLuSDK.framework */,
+				37EE50442351B488007FB338 /* ShareSupport */,
+				37EE50522351B488007FB338 /* AdsSDK */,
+				37EE505D2351B488007FB338 /* ArpuSDK */,
+			);
+			path = BiLuSDK;
+			sourceTree = "<group>";
+		};
+		37EE50442351B488007FB338 /* ShareSupport */ = {
+			isa = PBXGroup;
+			children = (
+				37EE50452351B488007FB338 /* Required */,
+				37EE504A2351B488007FB338 /* Optional */,
+				37EE504F2351B488007FB338 /* PlatformConnector */,
+			);
+			path = ShareSupport;
+			sourceTree = "<group>";
+		};
+		37EE50452351B488007FB338 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				37EE50462351B488007FB338 /* ShareSDKConnector.framework */,
+				37EE50472351B488007FB338 /* ShareSDK.bundle */,
+				37EE50482351B488007FB338 /* MOBFoundation.framework */,
+				37EE50492351B488007FB338 /* ShareSDK.framework */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		37EE504A2351B488007FB338 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				37EE504B2351B488007FB338 /* ShareSDKUI.bundle */,
+				37EE504C2351B488007FB338 /* ShareSDKExtension.framework */,
+				37EE504D2351B488007FB338 /* MobLinkPro.framework */,
+				37EE504E2351B488007FB338 /* ShareSDKUI.framework */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
+		37EE504F2351B488007FB338 /* PlatformConnector */ = {
+			isa = PBXGroup;
+			children = (
+				37EE50502351B488007FB338 /* QQConnector.framework */,
+				37EE50512351B488007FB338 /* WechatConnector.framework */,
+			);
+			path = PlatformConnector;
+			sourceTree = "<group>";
+		};
+		37EE50522351B488007FB338 /* AdsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				37EE50532351B488007FB338 /* BUAdSDK.framework */,
+				37EE50542351B488007FB338 /* GoogleAppMeasurement.framework */,
+				37EE50552351B488007FB338 /* Licenses */,
+				37EE50592351B488007FB338 /* GoogleUtilities.framework */,
+				37EE505A2351B488007FB338 /* nanopb.framework */,
+				37EE505B2351B488007FB338 /* GoogleMobileAds.framework */,
+				37EE505C2351B488007FB338 /* BUAdSDK.bundle */,
+			);
+			path = AdsSDK;
+			sourceTree = "<group>";
+		};
+		37EE50552351B488007FB338 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				37EE50562351B488007FB338 /* NanoPB-LICENSE */,
+				37EE50572351B488007FB338 /* OpenMeasurement-LICENSE */,
+				37EE50582351B488007FB338 /* GoogleUtilities-LICENSE */,
+			);
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		37EE505D2351B488007FB338 /* ArpuSDK */ = {
+			isa = PBXGroup;
+			children = (
+				373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */,
+				373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */,
+				373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */,
+				37EE505E2351B488007FB338 /* UpArpuAdmobInterstitialAdapter.framework */,
+				37EE505F2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework */,
+				37EE50602351B488007FB338 /* UpArpuBanner.framework */,
+				37EE50612351B488007FB338 /* UpArpuInterstitial.framework */,
+				37EE50622351B488007FB338 /* UpArpuRewardedVideo.framework */,
+				37EE50632351B488007FB338 /* UpArpuSDK.framework */,
+				37EE50642351B488007FB338 /* UpArpuTTInterstitialAdapter.framework */,
+				37EE50652351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework */,
+				37EE50662351B488007FB338 /* UpArpuAdmobBannerAdapter.framework */,
+				37EE50672351B488007FB338 /* UpArpuTTBannerAdapter.framework */,
+			);
+			path = ArpuSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37B0D1E52351A6820034A81A /* BiLuSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37B0D2072351A6830034A81A /* Build configuration list for PBXNativeTarget "BiLuSDKDemo" */;
+			buildPhases = (
+				37B0D1E22351A6820034A81A /* Sources */,
+				37B0D1E32351A6820034A81A /* Frameworks */,
+				37B0D1E42351A6820034A81A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiLuSDKDemo;
+			productName = BiLuSDKDemo;
+			productReference = 37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37B0D1FD2351A6830034A81A /* BiLuSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37B0D20A2351A6830034A81A /* Build configuration list for PBXNativeTarget "BiLuSDKDemoTests" */;
+			buildPhases = (
+				37B0D1FA2351A6830034A81A /* Sources */,
+				37B0D1FB2351A6830034A81A /* Frameworks */,
+				37B0D1FC2351A6830034A81A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37B0D2002351A6830034A81A /* PBXTargetDependency */,
+			);
+			name = BiLuSDKDemoTests;
+			productName = BiLuSDKDemoTests;
+			productReference = 37B0D1FE2351A6830034A81A /* BiLuSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37B0D1DE2351A6820034A81A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = mobile;
+				TargetAttributes = {
+					37B0D1E52351A6820034A81A = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					37B0D1FD2351A6830034A81A = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 37B0D1E52351A6820034A81A;
+					};
+				};
+			};
+			buildConfigurationList = 37B0D1E12351A6820034A81A /* Build configuration list for PBXProject "BiLuSDKDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37B0D1DD2351A6820034A81A;
+			productRefGroup = 37B0D1E72351A6820034A81A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37B0D1E52351A6820034A81A /* BiLuSDKDemo */,
+				37B0D1FD2351A6830034A81A /* BiLuSDKDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37B0D1E42351A6820034A81A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EE50772351B488007FB338 /* GoogleUtilities-LICENSE in Resources */,
+				37EE507B2351B488007FB338 /* BUAdSDK.bundle in Resources */,
+				37EE506A2351B488007FB338 /* ShareSDK.bundle in Resources */,
+				37B0D1F62351A6830034A81A /* LaunchScreen.storyboard in Resources */,
+				37EE506D2351B488007FB338 /* ShareSDKUI.bundle in Resources */,
+				37B0D1F32351A6830034A81A /* Assets.xcassets in Resources */,
+				37EE50752351B488007FB338 /* NanoPB-LICENSE in Resources */,
+				37EE50762351B488007FB338 /* OpenMeasurement-LICENSE in Resources */,
+				37B0D1F12351A6820034A81A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37B0D1FC2351A6830034A81A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37B0D1E22351A6820034A81A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B0D1EE2351A6820034A81A /* ViewController.m in Sources */,
+				37B0D1F92351A6830034A81A /* main.m in Sources */,
+				37B0D1EB2351A6820034A81A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37B0D1FA2351A6830034A81A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B0D2032351A6830034A81A /* BiLuSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37B0D2002351A6830034A81A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37B0D1E52351A6820034A81A /* BiLuSDKDemo */;
+			targetProxy = 37B0D1FF2351A6830034A81A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37B0D1EF2351A6820034A81A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37B0D1F02351A6820034A81A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37B0D1F42351A6830034A81A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37B0D1F52351A6830034A81A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37B0D2052351A6830034A81A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		37B0D2062351A6830034A81A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37B0D2082351A6830034A81A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86L92M2S83;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ShareSupport/Required",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ShareSupport/Optional",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ShareSupport/PlatformConnector",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/AdsSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ArpuSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ShareSupport/Required",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ShareSupport/Optional",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ShareSupport/PlatformConnector",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/AdsSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ArpuSDK",
+				);
+				INFOPLIST_FILE = BiLuSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pet.cm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37B0D2092351A6830034A81A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86L92M2S83;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ShareSupport/Required",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ShareSupport/Optional",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ShareSupport/PlatformConnector",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/AdsSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDKPa/ArpuSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ShareSupport/Required",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ShareSupport/Optional",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ShareSupport/PlatformConnector",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/AdsSDK",
+					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ArpuSDK",
+				);
+				INFOPLIST_FILE = BiLuSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pet.cm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		37B0D20B2351A6830034A81A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiLuSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.BiLuSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiLuSDKDemo.app/BiLuSDKDemo";
+			};
+			name = Debug;
+		};
+		37B0D20C2351A6830034A81A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BiLuSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.BiLuSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiLuSDKDemo.app/BiLuSDKDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37B0D1E12351A6820034A81A /* Build configuration list for PBXProject "BiLuSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B0D2052351A6830034A81A /* Debug */,
+				37B0D2062351A6830034A81A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37B0D2072351A6830034A81A /* Build configuration list for PBXNativeTarget "BiLuSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B0D2082351A6830034A81A /* Debug */,
+				37B0D2092351A6830034A81A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37B0D20A2351A6830034A81A /* Build configuration list for PBXNativeTarget "BiLuSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B0D20B2351A6830034A81A /* Debug */,
+				37B0D20C2351A6830034A81A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37B0D1DE2351A6820034A81A /* Project object */;
+}

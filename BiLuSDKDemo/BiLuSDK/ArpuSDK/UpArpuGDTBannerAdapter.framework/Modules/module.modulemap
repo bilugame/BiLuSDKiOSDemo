@@ -1,0 +1,6 @@
+framework module UpArpuGDTBannerAdapter {
+  umbrella header "UpArpuGDTBannerAdapter.h"
+
+  export *
+  module * { export * }
+}

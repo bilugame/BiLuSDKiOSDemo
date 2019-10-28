@@ -1,0 +1,6 @@
+framework module UpArpuInterstitial {
+  umbrella header "UpArpuInterstitial.h"
+
+  export *
+  module * { export * }
+}

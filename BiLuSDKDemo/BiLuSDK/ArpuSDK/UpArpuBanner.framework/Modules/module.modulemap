@@ -1,0 +1,6 @@
+framework module UpArpuBanner {
+  umbrella header "UpArpuBanner.h"
+
+  export *
+  module * { export * }
+}

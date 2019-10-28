@@ -1,0 +1,6 @@
+framework module UpArpuRewardedVideo {
+  umbrella header "UpArpuRewardedVideo.h"
+
+  export *
+  module * { export * }
+}

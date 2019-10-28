@@ -1,0 +1,6 @@
+framework module UpArpuAdmobBannerAdapter {
+  umbrella header "UpArpuAdmobBannerAdapter.h"
+
+  export *
+  module * { export * }
+}
