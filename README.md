@@ -536,3 +536,46 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
     NSLog(@"bannerView failedToAutoRefreshWithPlacementId：%@ error：%@",placementId,error);
 }
 </code></pre>
+
+
+## 7 基础-追踪玩家充值
+
+### 1、用途和用法
+玩家充值接口用于统计玩家充值现金而获得虚拟币的行为，充入的现金将反映至游戏收入中。
+充值过程分两个阶段：
+
+1、发出有效的充值请求；
+
+2、确认某次充值请求已完成充值。
+
+集成SDK时，在玩家发起充值请求时（例如玩家选择了某个充值包，进入支付流程那一刻）调用 onChargeRequest，并传入该笔交易的唯一订单ID和详细信息；在确认玩家支付成功时调用 onChargeSuccess，并告知所完成的订单ID。
+
+*注意事项：*
+
+1、orderID 是标识交易的关键，每一次的充值请求都需要是不同的 orderID，否则会被认为重复数据而丢弃，造成收入数据偏差的情况。如果多次充值成功的orderID重复，将只计算首次成功的数据，其他数据会认为重复数据丢弃。
+
+2、orderID 由您自己构造和管理，可以使用类似 userID+时间戳+随机数的方式来自己定义 orderID，来保障其唯一性。
+
+3、收入数据以调用了 onChargeSuccess 为准，Success 调用时的 orderID 要与 Request 中 orderID 对应，才可追溯到交易内容，有效计量。Request 必须调用，且需要早于 Success，否则可能影响收入数据的金额计数。
+
+4、由于客户端网络不稳定，数据发送会存在不稳定情况。为了准确记录充值数据，我们专门提供了“收入数据服务器接口”来解决此问题。
+
+### 2、接口及参数
+
+接口：(BiLuVirtualCurrency 类)
+
+    //充值请求
+    + (void)onChargeRequst:(NSString *)orderId iapId(NSString *)iapId currencyAmount:(double)currencyAmount currencyType:(NSString *)currencyType virtualCurrencyAmount:(double)virtualCurrencyAmount paymentType:(NSString *)paymentType;`
+    //充值成功
+    + (void)onChargeSuccess:(NSString *)orderId;
+
+
+|参数|类型|描述
+|---|---|---|
+|orderId	|NSString	|订单 ID，最多 64 个字符。用于唯一标识一次交易。如果多次充值成功的 orderID 重复，将只计算首次成功的数据，其他数据会认为重复数据丢弃。如果 Success 调用时传入的 orderID 在之前 Request 没有对应 orderID，则只记录充值次数，但不会有收入金额体现。
+|iapId	|NSString	|充值包 ID，最多 32 个字符。 唯一标识一类充值包。例如：VIP3 礼包、500 元 10000 宝石包
+|currencyAmount	|double	|现金金额或现金等价物的额度
+|currencyType	|NSString	|请使用国际标准组织 ISO4217 中规范的 3 位字母代码标记货币类型。例：人民币 CNY；美元 USD；欧元 EUR；如果您使用其他自定义等价物作为现金，亦可使用 ISO4217 中没有的3位字母组合传入货币型，我们会在报表页面中提供汇率设定功能
+|virtualCurrencyAmount	|double	|虚拟币金额
+|paymentType	|NSString	|支付的途径，最多 16 个字符。例如：“支付宝”、“苹果官方”、“XX 支付 SDK
+）
