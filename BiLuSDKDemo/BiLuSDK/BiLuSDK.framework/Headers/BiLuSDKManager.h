@@ -3,7 +3,7 @@
 //  BiLuSDKDevDemo
 //
 //  Created by ALLW on 2019/10/11.
-//  Copyright © 2019 mobile. All rights reserved.
+//  Copyright © 2019 bilu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
