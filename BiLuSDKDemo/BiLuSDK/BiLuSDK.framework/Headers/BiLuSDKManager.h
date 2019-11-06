@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "BiLuConfiguration.h"
+#import "BiLuPlayer.h"
 
 
 @interface BiLuSDKManager : NSObject
@@ -48,6 +49,18 @@
 + (void)registerWithAppID:(NSString *)appID
                    appKey:(NSString *)appKey
                    configuration:(BiLuConfiguration *)configuration;
+
+
+
+/// 带用户系统的 SDK注册
+/// @param appID 应用id
+/// @param appKey 应用key
+/// @param configuration 配置信息
+/// @param block 用户注册生成用户回调
++ (void)registerWithAppID:(NSString *)appID
+                   appKey:(NSString *)appKey
+            configuration:(BiLuConfiguration *)configuration
+                    block:(AuthenticateHandler)block;
 
 
 @end

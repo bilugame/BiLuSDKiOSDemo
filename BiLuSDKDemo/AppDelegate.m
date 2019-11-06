@@ -28,9 +28,16 @@
     configuration.QQAppID = @"1108231232";
     configuration.QQAppKey = @"aed9b0303e3ed1e27bae87c33761161d";
 
+//测试服
 //    [BiLuSDKManager registerWithAppID:@"e4da3b7fbbce2345" appKey:@"9046e6e901fc87a3e6faec3907d07805" configuration:configuration];
 
-    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration];
+    //正式服
+//    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration];
+
+    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
+
+        
+    }];
 
     return YES;
 }

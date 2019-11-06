@@ -646,6 +646,7 @@
 					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ArpuSDK",
 				);
 				INFOPLIST_FILE = BiLuSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,6 +681,7 @@
 					"$(PROJECT_DIR)/BiLuSDKDemo/BiLuSDK/ArpuSDK",
 				);
 				INFOPLIST_FILE = BiLuSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

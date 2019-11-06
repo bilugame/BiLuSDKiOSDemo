@@ -6,6 +6,8 @@
 BiLuSDK支持激励视频广告(rewardVideo)，banner广告和插屏广告(intersitial)。
 ### 1.2 支持的分享类型
 BiLuSDK支持微信好友和微信朋友圈分享，QQ好友和QQ空间分享。
+### 1.3 支持用户系统
+BiLuSDK支持Game Center 和游客模式 生成用户系统。
 
 
 ## <h2 id='1'>2 配置</h2>
@@ -115,6 +117,29 @@ BiLuSDK支持微信好友和微信朋友圈分享，QQ好友和QQ空间分享。
     configuration.QQAppKey = @"QQappkey";
     configuration.sdkType = @"Unity";
     [BiLuSDKManager registerWithAppID:@"哔噜AppId" appKey:@"哔噜AppKey" configuration:configuration];
+
+    return YES;
+}</code></pre>
+
+
+### 2.6 带用户系统的初始化SDK
+
+您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**BiLuSDK**(必须在请求广告之前去初始化SDK)：
+
+<pre><code>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	
+    BiLuConfiguration *configuration = [BiLuConfiguration configuration];
+
+    configuration.WXAppID = @"wx1c7767afcfc969e9";
+    configuration.WXAppKey = @"c7253e5289986cf4c4c74d1ccc185fb1";
+    configuration.QQAppID = @"1108231232";
+    configuration.QQAppKey = @"aed9b0303e3ed1e27bae87c33761161d";
+
+    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
+
+        
+    }];
 
     return YES;
 }</code></pre>
@@ -538,9 +563,9 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 </code></pre>
 
 
-## 7 基础-追踪玩家充值
 
-### 1、用途和用法
+## 7 基础-追踪玩家充值
+1、用途和用法
 玩家充值接口用于统计玩家充值现金而获得虚拟币的行为，充入的现金将反映至游戏收入中。
 充值过程分两个阶段：
 
@@ -570,7 +595,7 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
     + (void)onChargeSuccess:(NSString *)orderId;
 
 
-|参数|类型|描述
+|参数|类型|描述|
 |---|---|---|
 |orderId	|NSString	|订单 ID，最多 64 个字符。用于唯一标识一次交易。如果多次充值成功的 orderID 重复，将只计算首次成功的数据，其他数据会认为重复数据丢弃。如果 Success 调用时传入的 orderID 在之前 Request 没有对应 orderID，则只记录充值次数，但不会有收入金额体现。
 |iapId	|NSString	|充值包 ID，最多 32 个字符。 唯一标识一类充值包。例如：VIP3 礼包、500 元 10000 宝石包
@@ -579,3 +604,23 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 |virtualCurrencyAmount	|double	|虚拟币金额
 |paymentType	|NSString	|支付的途径，最多 16 个字符。例如：“支付宝”、“苹果官方”、“XX 支付 SDK
 ）
+
+
+
+## 8 高级-自定义事件
+
+### 1、用途和用法
+自定义事件用于统计任何您期望去追踪的数据，如：点击某功能按钮、填写某个输入框、触发了某个广告等。 开发者可以自行定义eventId，在游戏中需要追踪的位置进行调用，注意eventId中仅限使用中英文字符、数字和下划线，不要加空格或其他的转义字符。 除了可以统计某自定义eventId的触发次数，还可以通过key-value参数来对当时触发事件时的属性进行描述。如定义 eventId 为玩家死亡事件，可通过 key-value 添加死亡时关卡、死亡时等级、死亡时携带金币等属性。 每款游戏可定义最多10000个不同eventId，每个eventId下，可以支持100种 不同 key 的 1000种不同 value 取值(NSString 类型)，但是每次事件发生时最多只能同时附带 50 种不同 key。
+
+### 2、接口及参数
+接口： 在游戏程序的event事件中加入下面格式的代码，也就成功的添加了一个简单的事件到您的游戏程序中了：
+
+    [BiLuEvent onbiLuEvent:@"event_id" eventData:your_dictionary];
+
+参数：
+
+|参数|类型|描述|
+|---|---|---|
+|eventId	|NSString	|自定义事件名称，最多支持 32 个字符。仅限使用中英文字符、数字和下划线，不要加空格或其他的转义字符|
+|key	|NSString	|自定义事件参数名称，最多支持 32 个字符|
+|NSDictionary	|NSString<br>NSNumber | key 类型必须是 NSString，一次事件最多只支持 50 个参数。如果 value 为 NSString，Game Analytics 会统计每种 value 出现的次数；如果为 NSNumber 类型，那么 Game  Analytics 会统计 value 的总和|
