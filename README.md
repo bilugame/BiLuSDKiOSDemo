@@ -1,21 +1,58 @@
 # **iOS集成BiLuSDK**
 
-## 1 简介
-本文档介绍如何去集成iOS端的BiLuSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。
-### 1.1 支持的广告类型
+* [1、简介](#1、简介)
+  * 1.1 [支持的广告类型](#1.1、支持的广告类型)
+  * 1.2 [支持的分享类型](#1.2、支持的分享类型)
+  * 1.3 [支持用户系统](#1.3、支持用户系统)
+* [2、配置](#2、配置)
+  * 2.1 [基础配置](#2.1、基础配置)
+  * 2.2 [导入基础核心框架](#2.2、导入基础核心框架)
+  * 2.3 [导入BiLuSDK和第三方的支持SDK](#2.3、导入BiLuSDK和第三方的支持SDK)
+  * 2.4 [配置 Build Settings 和 Info.plist](#2.4、配置&nbsp;Build&nbsp;Settings&nbsp;和&nbsp;Info.plist)
+  * 2.5 [初始化SDK](#2.5、初始化SDK)
+  * 2.6 [带用户系统的初始化SDK](#2.6、带用户系统的初始化SDK)
+* [3、分享](#3、分享)
+  * 3.1 [配置分享](#3.1、配置分享)
+  * 3.2 [带UI的分享](#3.2、带UI的分享)
+  * 3.3 [自定义UI分享](#3.3、自定义UI分享)
+* [4、激励视频(Rewarded Video)](#4、激励视频(Rewarded&nbsp;Video))
+  * 4.1 [加载Rewarded Video](#4.1、加载Rewarded&nbsp;Video)
+  * 4.2 [判断Rewarded Video是否ready](#4.2、判断Rewarded&nbsp;Video是否ready)
+  * 4.3 [展示Rewarded Video](#4.3、展示Rewarded&nbsp;Video)
+  * 4.4 [实现Rewarded Video的Delegate](#4.4、实现Rewarded&nbsp;Video的Delegate)
+* [5、插屏广告(Interstitial)](#5、插屏广告(Interstitial))
+  * 5.1 [加载Interstitial](#5.1、加载Interstitial)
+  * 5.2 [判断Interstitial是否Ready](#5.2、判断Interstitial是否Ready)
+  * 5.3 [展示Interstitial](#5.3、展示Interstitial)
+  * 5.4 [实现Interstitial的Delegate](#5.4、实现Interstitial的Delegate)
+* [6、Banner广告](#6、Banner广告)
+  * 6.1 [加载Banner](#6.1、加载Banner)
+  * 6.2 [判断Banner是否Ready](#6.2、判断Banner是否Ready)
+  * 6.3 [展示Banner](#6.3、展示Banner)
+* [7、基础-追踪玩家充值](#7、基础-追踪玩家充值)
+  * 7.1 [用途和用法](#7.1、用途和用法)
+  * 7.2 [接口及参数](#7.2、接口及参数)
+* [8、高级-自定义事件](#8、高级-自定义事件)
+  * 8.1 [用途和用法](#8.1、用途和用法)
+  * 8.2 [接口及参数](#8.2、接口及参数)
+
+
+## 1、简介
+本文档介绍如何去集成iOS端的BiLuSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。支持追踪玩家充值和自定义事件监控。
+### 1.1、支持的广告类型
 BiLuSDK支持激励视频广告(rewardVideo)，banner广告和插屏广告(intersitial)。
-### 1.2 支持的分享类型
+### 1.2、支持的分享类型
 BiLuSDK支持微信好友和微信朋友圈分享，QQ好友和QQ空间分享。
-### 1.3 支持用户系统
+### 1.3、支持用户系统
 BiLuSDK支持Game Center 和游客模式 生成用户系统。
 
 
-## <h2 id='1'>2 配置</h2>
-### 2.1 基础配置
+## 2、配置 
+### 2.1、基础配置
 	Xcode10版本及以上。
 	Target iOS 9.0及以上。
 
-### 2.2 导入基础核心框架
+### 2.2、导入基础核心框架
 核心模块包含以下框架和资源包文件，只需将它们拖放到Xcode中。
 
 - BiLuSDK.framework
@@ -23,7 +60,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 
 **注:** 由于**BiLuSDK**暂时不支持cocoapod
 
-### 2.3 导入BiLuSDK和第三方的支持SDK
+### 2.3、导入BiLuSDK和第三方的支持SDK
 
 
 |第三方平台|需要导入的包|**BiLu**支持的版本|参考网址|备注|    
@@ -62,7 +99,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 
 
 
-### 2.4 配置 Build Settings 和 Info.plist
+### 2.4、配置 Build Settings 和 Info.plist
 
 1) 在 Xcode中, 点击到 **Build Settings**, 搜索 **Other Linker Flags** 然后添加 **-ObjC**(这里的字母O和字母C**需要大写**), 注意 **Linker Flags** 是区分大小写的:
 ![](README_IMAGE/build_setting_01.png)
@@ -103,7 +140,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 - Privacy - Location Always Usage Description
 - Privacy - Location Usage Description
 
-### 2.5 初始化SDK
+### 2.5、初始化SDK
 
 您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**BiLuSDK**(必须在请求广告之前去初始化SDK)：
 
@@ -122,7 +159,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 }</code></pre>
 
 
-### 2.6 带用户系统的初始化SDK
+### 2.6、带用户系统的初始化SDK
 
 您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**BiLuSDK**(必须在请求广告之前去初始化SDK)：
 
@@ -136,22 +173,21 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
     configuration.QQAppID = @"1108231232";
     configuration.QQAppKey = @"aed9b0303e3ed1e27bae87c33761161d";
 
-    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
+    [BiLuSDKManager registerWithAppID:@"哔噜AppId" appKey:@"哔噜AppKey" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
 
-        
     }];
 
     return YES;
 }</code></pre>
 
-## 3 分享
+## 3、分享
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
-### 3.1 配置分享
+### 3.1、配置分享
 在 Xcode 中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序 id（如下图所示）。
 
 ![](README_IMAGE/build_setting_11.png)
 
-### 3.1 带UI的分享
+### 3.2、带UI的分享
 
 <pre><code>
 [BiLuShare shareWithUIRespBlock:^(NSError *error, BiLuShareResponse state) {
@@ -159,7 +195,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 }];
 </code></pre>
 
-### 3.2 自定义UI分享
+### 3.3、自定义UI分享
 
 <pre><code>
 [BiLuShare shareWithScene:BiLuShareSenceWXSession respBlock:^(NSError *error, BiLuShareResponse start) {
@@ -167,10 +203,10 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 }];
 </code></pre>
 
-## 4 激励视频(Rewarded Video)
+## 4、激励视频(Rewarded Video)
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
-### 4.1 加载Rewarded Video
+### 4.1、加载Rewarded Video
 您需要确认您添加了**BiluAdLoadingDelegate**和**BiLuAdsRewardedVideoDelegate**代理协议：
 ```
 @interface ViewController() <BiluAdLoadingDelegate,BiLuAdsRewardedVideoDelegate>
@@ -214,7 +250,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 }
 </code></pre>
 
-### 4.2 判断Rewarded Video是否ready
+### 4.2、判断Rewarded Video是否ready
 您可以检查Rewarded Video广告是否已经Ready
 <pre><code>
 if ([[BiLuAdsManager sharedInstance] rewardedVideoReadyForPlacementId:@"广告位Id"]) {
@@ -225,13 +261,13 @@ if ([[BiLuAdsManager sharedInstance] rewardedVideoReadyForPlacementId:@"广告�
 }
 </code></pre>
 
-### 4.3 展示Rewarded Video
+### 4.3、展示Rewarded Video
 在您Rewared Video加载完成之后，您可以用BiLuAdsManager去展示Rewared Video：
 <pre><code>
 [[BiLuAdsManager sharedInstance] showRewardedVideoWithPlacementId:@"广告位Id" inViewController:self delegate:self];
 </code></pre>
 
-### 4.4 实现Rewarded Video的Delegate
+### 4.4、实现Rewarded Video的Delegate
 您可以实现**BiLuAdsRewardedVideoDelegate**的方法来获取Rewarded Video的各种事件：
 
 <pre><code>
@@ -291,10 +327,10 @@ if ([[BiLuAdsManager sharedInstance] rewardedVideoReadyForPlacementId:@"广告�
 }
 </code></pre>
 
-## 5 插屏广告(Interstitial)
+## 5、插屏广告(Interstitial)
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
-### 5.1 加载Interstitial
+### 5.1、加载Interstitial
 您需要确认您添加了**BiluAdLoadingDelegate**和**BiLuAdsInterstitialDelegate**代理协议：
 ```
 @interface ViewController() <BiluAdLoadingDelegate,BiLuAdsInterstitialDelegate>
@@ -337,7 +373,7 @@ if ([[BiLuAdsManager sharedInstance] rewardedVideoReadyForPlacementId:@"广告�
 }
 </code></pre>
 
-### 5.2 判断Interstitial是否Ready
+### 5.2、判断Interstitial是否Ready
 您可以检查Interstitial广告是否已经Ready
 <pre><code>
 if ([[BiLuAdsManager sharedInstance] interstitialReadyForPlacementId:@"广告位Id"]) {
@@ -347,14 +383,14 @@ if ([[BiLuAdsManager sharedInstance] interstitialReadyForPlacementId:@"广告位
 }
 </code></pre>
 
-### 5.3 展示Interstitial
+### 5.3、展示Interstitial
 在您Interstitial加载完成之后，您可以用BiLuAdsManager去展示Interstitial：
  
 <pre><code>
 [[BiLuAdsManager sharedInstance] showRewardedVideoWithPlacementId:@"广告位Id" inViewController:self delegate:self];
 </code></pre>
 
-### 5.4 实现Interstitial的Delegate
+### 5.4、实现Interstitial的Delegate
 您可以实现**BiLuAdsInterstitialDelegate**的方法来获取Interstitial的各种事件：
 <pre><code>
 #pragma mark - BiluAdInterstitialDelegate
@@ -432,10 +468,10 @@ if ([[BiLuAdsManager sharedInstance] interstitialReadyForPlacementId:@"广告位
 }
 </code></pre>
 
-## 6 Banner广告
-在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
+## 6、Banner广告
+在继续接入之前，您需要保证您已经完成了以上 [配置](#2、配置) 步骤。
 
-### 6.1 加载Banner
+### 6.1、加载Banner
 您需要确认您添加了**BiluAdLoadingDelegate**和**BiLuAdsBannerDelegate**代理协议：
 ```
 @interface ViewController() <BiluAdLoadingDelegate,BiLuAdsBannerDelegate>
@@ -472,7 +508,7 @@ if ([[BiLuAdsManager sharedInstance] interstitialReadyForPlacementId:@"广告位
     NSLog(@"广告加载失败 PlacementId：%@ error:%@",placementId,error);
 }</code></pre>
 
-### 6.3 判断Banner是否Ready
+### 6.2、判断Banner是否Ready
 
 您可以检查Banner广告是否已经Ready：
 
@@ -484,7 +520,7 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 }
 </code></pre>
 
-### 6.4 展示Banner
+### 6.3、展示Banner
 在您Banner加载完成之后，您可以用BiLuAdsManager去展示去展示Banner：
  
 <pre><code>
@@ -505,7 +541,7 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 
 }</code></pre>
 
-### 6.5 实现Banner的Delegate
+### 6.5实现Banner的Delegate
 您可以实现**BiLuAdsBannerDelegate**的方法来获取Banner的各种事件：
 <pre><code>
 #pragma mark - BiluAdBannerDelegate
@@ -564,8 +600,9 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 
 
 
-## 7 基础-追踪玩家充值
-1、用途和用法
+## 7、基础-追踪玩家充值
+
+### 7.1、用途和用法
 玩家充值接口用于统计玩家充值现金而获得虚拟币的行为，充入的现金将反映至游戏收入中。
 充值过程分两个阶段：
 
@@ -585,7 +622,7 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 
 4、由于客户端网络不稳定，数据发送会存在不稳定情况。为了准确记录充值数据，我们专门提供了“收入数据服务器接口”来解决此问题。
 
-### 2、接口及参数
+### 7.2、接口及参数
 
 接口：(BiLuVirtualCurrency 类)
 
@@ -607,12 +644,12 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 
 
 
-## 8 高级-自定义事件
+## 8、高级-自定义事件
 
-### 1、用途和用法
+### 8.1、用途和用法
 自定义事件用于统计任何您期望去追踪的数据，如：点击某功能按钮、填写某个输入框、触发了某个广告等。 开发者可以自行定义eventId，在游戏中需要追踪的位置进行调用，注意eventId中仅限使用中英文字符、数字和下划线，不要加空格或其他的转义字符。 除了可以统计某自定义eventId的触发次数，还可以通过key-value参数来对当时触发事件时的属性进行描述。如定义 eventId 为玩家死亡事件，可通过 key-value 添加死亡时关卡、死亡时等级、死亡时携带金币等属性。 每款游戏可定义最多10000个不同eventId，每个eventId下，可以支持100种 不同 key 的 1000种不同 value 取值(NSString 类型)，但是每次事件发生时最多只能同时附带 50 种不同 key。
 
-### 2、接口及参数
+### 8.2、接口及参数
 接口： 在游戏程序的event事件中加入下面格式的代码，也就成功的添加了一个简单的事件到您的游戏程序中了：
 
     [BiLuEvent onbiLuEvent:@"event_id" eventData:your_dictionary];
