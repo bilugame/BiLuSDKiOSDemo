@@ -73,10 +73,10 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 
 **注:** 导入SDK和系统支持库操作
 
-![](README_IMAGE/build_setting_07.png)
-![](README_IMAGE/build_setting_08.png)
-![](README_IMAGE/build_setting_09.png)
-![](README_IMAGE/build_setting_10.png)
+![](README_IMAGE/build_setting_07-min.png)
+![](README_IMAGE/build_setting_08-min.png)
+![](README_IMAGE/build_setting_09-min.png)
+![](README_IMAGE/build_setting_10-min.png)
 
 - StoreKit.framework
 - MobileCoreServices.framework
@@ -102,19 +102,19 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 ### 2.4、配置 Build Settings 和 Info.plist
 
 1) 在 Xcode中, 点击到 **Build Settings**, 搜索 **Other Linker Flags** 然后添加 **-ObjC**(这里的字母O和字母C**需要大写**), 注意 **Linker Flags** 是区分大小写的:
-![](README_IMAGE/build_setting_01.png)
+![](README_IMAGE/build_setting_01-min.png)
 
 2) 在 Xcode中, 点击到 **Build Settings**, 搜索 **Enable Bitcode** 设置为NO
-![](README_IMAGE/build_setting_02.png)
+![](README_IMAGE/build_setting_02-min.png)
 
 3) 在您app的Info.plist中添加 **App Transport Security Settings** - **NSAllowsArbitraryLoads** 设置为YES
-![](README_IMAGE/build_setting_03.png)
+![](README_IMAGE/build_setting_03-min.png)
 
 4) 在您app的Info.plist中添加 **GADApplicationIdentifier** 对应的值是Admob的应用ID
-![](README_IMAGE/build_setting_04.png)
+![](README_IMAGE/build_setting_04-min.png)
 
 5) 在您app的Info.plist中添加 **MOBAppKey**和 **MOBAppSecret** 对应的值是Share的Appkey和AppSecret
-![](README_IMAGE/build_setting_05.png)
+![](README_IMAGE/build_setting_05-min.png)
 
 6) 在您app的Info.plist中添加 **LSApplicationQueriesSchemes** 添加以下值
 - wechat
@@ -129,10 +129,10 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 - mqqopensdkminiapp
 
 
-![](README_IMAGE/build_setting_06.png)
+![](README_IMAGE/build_setting_06-min.png)
 
 7) iOS 12.0 及以上系统获取 WiFi 的信息时，需要打开 **Access WiFi Information** 选项（Xcode 10.0 以上有此选项）
-![](README_IMAGE/build_setting_12.png)
+![](README_IMAGE/build_setting_12-min.png)
 
 8) 设置权限
 - Privacy - Location When In Use Usage Description
@@ -185,7 +185,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 ### 3.1、配置分享
 在 Xcode 中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序 id（如下图所示）。
 
-![](README_IMAGE/build_setting_11.png)
+![](README_IMAGE/build_setting_11-min.png)
 
 ### 3.2、带UI的分享
 
