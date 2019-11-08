@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 
+#import <BiLuSDK/BiLuVirtualCurrency.h>
+#import <BiLuSDK/BiLuEvent.h>
+#import <BiLuSDK/BiLuSDK.h>
+
+
+
 #define BIScreenWidth       [UIScreen mainScreen].bounds.size.width
 
 #define BIScreenHeight      [UIScreen mainScreen].bounds.size.height
@@ -21,9 +27,6 @@
 #define BILog(msg,obj) NSLog(@"\n---------------BILU-----------------\n\n\n%@:%@\n\n\n------------------------------------",msg,obj)
 
 #define BIMsgLog(msg) NSLog(@"\n---------------BILU-----------------\n\n\n%@\n\n\n------------------------------------",msg)
-
-
-#import <BiLuSDK/BiLuSDK.h>
 
 @interface ViewController ()
 
@@ -39,6 +42,10 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+
+    [BiLuVirtualCurrency appStoreReceipt:^(NSDictionary * _Nonnull json, NSError * _Nonnull error) {
+
+    }];
 
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatBtns];

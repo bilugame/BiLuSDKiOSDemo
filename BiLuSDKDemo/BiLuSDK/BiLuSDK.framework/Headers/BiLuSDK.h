@@ -13,6 +13,8 @@
 #import "BiLuAdsManager+Banner.h"
 #import "BiLuAdsManager+RewardedVideo.h"
 #import "BiLuAdsManager+Interstitial.h"
+#import "BiLuVirtualCurrency.h"
+#import "BiLuEvent.h"#import "BiLuEvent.h"
 
 //! Project version number for BiLuSDK.
 FOUNDATION_EXPORT double BiLuSDKVersionNumber;

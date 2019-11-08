@@ -22,11 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 *    @param     paymentType             支付类型      类型:NSString
 */
 + (void)onChargeRequst:(NSString *)orderId
-                iapId:(NSString *)iapId
-       currencyAmount:(double)currencyAmount
-         currencyType:(NSString *)currencyType
-virtualCurrencyAmount:(double)virtualCurrencyAmount
-          paymentType:(NSString *)paymentType;
+                 iapId:(NSString *)iapId
+        currencyAmount:(double)currencyAmount
+          currencyType:(NSString *)currencyType
+ virtualCurrencyAmount:(double)virtualCurrencyAmount
+           paymentType:(NSString *)paymentType;
 
 
 /**
@@ -34,6 +34,11 @@ virtualCurrencyAmount:(double)virtualCurrencyAmount
 *    @param     orderId                 订单id        类型:NSString
 */
 + (void)onChargeSuccess:(NSString *)orderId ;
+
+
+/// AppStore 内购二次验证
+/// @param response 二次验证 返回block
++ (void)appStoreReceipt:(void (^)(NSDictionary *json , NSError * error))response;
 
 @end
 

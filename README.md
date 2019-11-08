@@ -32,9 +32,11 @@
 * [7、基础-追踪玩家充值](#7、基础-追踪玩家充值)
   * 7.1 [用途和用法](#7.1、用途和用法)
   * 7.2 [接口及参数](#7.2、接口及参数)
+  * 7.3 [苹果内购二次验证](#7.3、苹果内购二次验证)
 * [8、高级-自定义事件](#8、高级-自定义事件)
   * 8.1 [用途和用法](#8.1、用途和用法)
   * 8.2 [接口及参数](#8.2、接口及参数)
+
 
 
 ## 1、简介
@@ -641,6 +643,14 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 |virtualCurrencyAmount	|double	|虚拟币金额
 |paymentType	|NSString	|支付的途径，最多 16 个字符。例如：“支付宝”、“苹果官方”、“XX 支付 SDK
 ）
+
+### 7.3、苹果内购二次验证
+
+接口：(BiLuVirtualCurrency 类)
+
+    /// AppStore 内购二次验证
+    /// @param response 二次验证 返回block
+    + (void)appStoreReceipt:(void (^)(NSDictionary *json , NSError * error))response;
 
 
 
