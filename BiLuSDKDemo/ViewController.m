@@ -12,6 +12,7 @@
 #import <BiLuSDK/BiLuEvent.h>
 #import <BiLuSDK/BiLuSDK.h>
 
+#import "PayViewController.h"
 
 
 #define BIScreenWidth       [UIScreen mainScreen].bounds.size.width
@@ -43,9 +44,11 @@
 
     [super viewDidLoad];
 
-    [BiLuVirtualCurrency appStoreReceipt:^(NSDictionary * _Nonnull json, NSError * _Nonnull error) {
+//    [BiLuVirtualCurrency appStoreReceipt:^(NSDictionary * _Nonnull json, NSError * _Nonnull error) {
+//
+//    }];
 
-    }];
+    [BiLuEvent onbiLuEvent:@"launch" eventData:@{@"time":@"2019-11-12",@"user":@"aaa"}];
 
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatBtns];
@@ -54,7 +57,7 @@
 
 - (void)creatBtns {
 
-    NSArray * array = @[@"分享",@"加载Banner",@"加载激励视频",@"加载插屏",@"显示Banner",@"显示激励视频",@"显示插屏"];
+    NSArray * array = @[@"分享",@"加载Banner",@"加载激励视频",@"加载插屏",@"显示Banner",@"显示激励视频",@"显示插屏",@"充值"];
     CGFloat w = UIScreen.mainScreen.bounds.size.width;
     CGFloat x = (w - 150)/2;
 
@@ -101,8 +104,11 @@
         [self showInter:btn];
     }else if (tag == 7){
         [self.activityIndicator stopAnimating];
-        [[BiLuAdsManager sharedInstance] clearCache];
-        [self showAlertMessage:[NSString stringWithFormat:@"清除所有广告缓存"]];
+//        [[BiLuAdsManager sharedInstance] clearCache];
+//        [self showAlertMessage:[NSString stringWithFormat:@"清除所有广告缓存"]];
+
+        PayViewController * nextVC = [[PayViewController alloc]init];
+        [self presentViewController:nextVC animated:YES completion:nil];
     }
 
 }

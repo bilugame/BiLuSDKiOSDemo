@@ -13,6 +13,8 @@
 		373B153C235EA01A00E7DF4F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B153B235EA01A00E7DF4F /* CoreLocation.framework */; };
 		373B153E235EA02400E7DF4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B153D235EA02400E7DF4F /* QuartzCore.framework */; };
 		373B1540235EA02D00E7DF4F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B153F235EA02D00E7DF4F /* libxml2.tbd */; };
+		379AC937237A9AEE003E9891 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379AC936237A9AEE003E9891 /* PayViewController.m */; };
+		379AC93A237A9D99003E9891 /* AppStorePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 379AC938237A9D99003E9891 /* AppStorePay.m */; };
 		37B0D1EB2351A6820034A81A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0D1EA2351A6820034A81A /* AppDelegate.m */; };
 		37B0D1EE2351A6820034A81A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B0D1ED2351A6820034A81A /* ViewController.m */; };
 		37B0D1F12351A6820034A81A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0D1EF2351A6820034A81A /* Main.storyboard */; };
@@ -81,6 +83,10 @@
 		373B153B235EA01A00E7DF4F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		373B153D235EA02400E7DF4F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		373B153F235EA02D00E7DF4F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		379AC935237A9AEE003E9891 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		379AC936237A9AEE003E9891 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		379AC938237A9D99003E9891 /* AppStorePay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStorePay.m; sourceTree = "<group>"; };
+		379AC939237A9D99003E9891 /* AppStorePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStorePay.h; sourceTree = "<group>"; };
 		37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiLuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0D1E92351A6820034A81A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37B0D1EA2351A6820034A81A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,6 +231,10 @@
 				37EE50422351B488007FB338 /* BiLuSDK */,
 				37B0D1EC2351A6820034A81A /* ViewController.h */,
 				37B0D1ED2351A6820034A81A /* ViewController.m */,
+				379AC935237A9AEE003E9891 /* PayViewController.h */,
+				379AC936237A9AEE003E9891 /* PayViewController.m */,
+				379AC939237A9D99003E9891 /* AppStorePay.h */,
+				379AC938237A9D99003E9891 /* AppStorePay.m */,
 				37B0D1EF2351A6820034A81A /* Main.storyboard */,
 				37B0D1F22351A6830034A81A /* Assets.xcassets */,
 				37B0D1F42351A6830034A81A /* LaunchScreen.storyboard */,
@@ -469,7 +479,9 @@
 			files = (
 				37B0D1EE2351A6820034A81A /* ViewController.m in Sources */,
 				37B0D1F92351A6830034A81A /* main.m in Sources */,
+				379AC93A237A9D99003E9891 /* AppStorePay.m in Sources */,
 				37B0D1EB2351A6820034A81A /* AppDelegate.m in Sources */,
+				379AC937237A9AEE003E9891 /* PayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
