@@ -62,7 +62,11 @@
             configuration:(BiLuConfiguration *)configuration
                     block:(AuthenticateHandler)block;
 
+// 用户唯一字符串
++ (NSString *)getBilu_UUID ;
 
+//设备唯一内部标志
++ (NSString *)getBilu_BLID ;
 @end
 
 

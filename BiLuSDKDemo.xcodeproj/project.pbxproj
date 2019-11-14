@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3D9463237D436B002AB668 /* BiLuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3D9462237D436B002AB668 /* BiLuSDK.framework */; };
 		373B1538235E9FAF00E7DF4F /* UpArpuGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */; };
 		373B1539235E9FAF00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */; };
 		373B153A235E9FAF00E7DF4F /* UpArpuGDTBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */; };
@@ -34,7 +35,6 @@
 		37B0D2672351A7830034A81A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2662351A7830034A81A /* libz.tbd */; };
 		37B0D2692351A78B0034A81A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D2682351A78B0034A81A /* libc++.tbd */; };
 		37B0D26B2351A7930034A81A /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B0D26A2351A7930034A81A /* libresolv.9.tbd */; };
-		37EE50682351B488007FB338 /* BiLuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50432351B488007FB338 /* BiLuSDK.framework */; };
 		37EE50692351B488007FB338 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50462351B488007FB338 /* ShareSDKConnector.framework */; };
 		37EE506A2351B488007FB338 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EE50472351B488007FB338 /* ShareSDK.bundle */; };
 		37EE506B2351B488007FB338 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE50482351B488007FB338 /* MOBFoundation.framework */; };
@@ -77,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3D9462237D436B002AB668 /* BiLuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BiLuSDK.framework; sourceTree = "<group>"; };
 		373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTInterstitialAdapter.framework; sourceTree = "<group>"; };
 		373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTBannerAdapter.framework; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 		37B0D2662351A7830034A81A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		37B0D2682351A78B0034A81A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		37B0D26A2351A7930034A81A /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
-		37EE50432351B488007FB338 /* BiLuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BiLuSDK.framework; sourceTree = "<group>"; };
 		37EE50462351B488007FB338 /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
 		37EE50472351B488007FB338 /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
 		37EE50482351B488007FB338 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
@@ -172,6 +172,7 @@
 				37EE50832351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework in Frameworks */,
 				37EE507D2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */,
 				37B0D2612351A7670034A81A /* SystemConfiguration.framework in Frameworks */,
+				0D3D9463237D436B002AB668 /* BiLuSDK.framework in Frameworks */,
 				37EE50842351B488007FB338 /* UpArpuAdmobBannerAdapter.framework in Frameworks */,
 				37B0D25F2351A7600034A81A /* CoreTelephony.framework in Frameworks */,
 				37EE506F2351B488007FB338 /* MobLinkPro.framework in Frameworks */,
@@ -182,7 +183,6 @@
 				37EE50742351B488007FB338 /* GoogleAppMeasurement.framework in Frameworks */,
 				37B0D25D2351A7550034A81A /* AVFoundation.framework in Frameworks */,
 				37B0D25B2351A74E0034A81A /* CoreMedia.framework in Frameworks */,
-				37EE50682351B488007FB338 /* BiLuSDK.framework in Frameworks */,
 				37B0D2592351A7480034A81A /* MediaPlayer.framework in Frameworks */,
 				37EE50702351B488007FB338 /* ShareSDKUI.framework in Frameworks */,
 				37B0D2572351A73F0034A81A /* WebKit.framework in Frameworks */,
@@ -278,7 +278,7 @@
 		37EE50422351B488007FB338 /* BiLuSDK */ = {
 			isa = PBXGroup;
 			children = (
-				37EE50432351B488007FB338 /* BiLuSDK.framework */,
+				0D3D9462237D436B002AB668 /* BiLuSDK.framework */,
 				37EE50442351B488007FB338 /* ShareSupport */,
 				37EE50522351B488007FB338 /* AdsSDK */,
 				37EE505D2351B488007FB338 /* ArpuSDK */,
@@ -639,8 +639,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86L92M2S83;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CC39248354;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,8 +664,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pet.cm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bilu.appAdhoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = biluApp_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -674,8 +675,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86L92M2S83;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CC39248354;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,8 +700,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pet.cm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bilu.appAdhoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = biluApp_dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
