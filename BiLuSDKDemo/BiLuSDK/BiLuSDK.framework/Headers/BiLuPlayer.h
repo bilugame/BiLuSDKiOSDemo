@@ -18,7 +18,8 @@ typedef void(^AuthenticateHandler)(BiLuPlayer *player , NSError *error);
 @property(nonatomic, copy) NSString *alias;
 /// 用户id
 @property(nonatomic, copy) NSString *playerID;
-
+//登录注册回调消息（带注册界面的SDK初始化使用，其他忽略）
+@property(nonatomic, copy) NSString *registerCode;
 @end
 
 NS_ASSUME_NONNULL_END

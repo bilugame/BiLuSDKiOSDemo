@@ -63,6 +63,25 @@
                     block:(AuthenticateHandler)block;
 
 
+
+/// 带登录界面的SDK注册
+/// @param appID 应用id
+/// @param appKey 应用key
+/// @param configuration 配置信息
+/// @param block 用户注册生成用户回调
++ (void)registerViewWithAppID:(NSString *)appID
+       appKey:(NSString *)appKey
+configuration:(BiLuConfiguration *)configuration
+        block:(AuthenticateHandler)block;
+
+
+// 用户唯一字符串
++ (NSString *)getBilu_UUID ;
+
+//设备唯一内部标志
++ (NSString *)getBilu_BLID ;
+
+
 @end
 
 

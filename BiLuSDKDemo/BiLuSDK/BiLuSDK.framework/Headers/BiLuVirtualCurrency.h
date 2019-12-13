@@ -10,7 +10,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger,BiLuIAPResultType) {
+    BiLuIAPResultSuccess = 0,       // 购买成功
+    BiLuIAPResultFailed = 1,        // 购买失败
+    BiLuIAPResultCancle = 2,        // 取消购买
+    BiLuIAPResultVerFailed = 3,     // 订单校验失败
+    BiLuIAPResultVerSuccess = 4,    // 订单校验成功
+    BiLuIAPResultNotArrow = 5,      // 不允许内购
+    BiLuIAPResultIDError = 6,       // 项目ID错误或不存在此项目
+};
+
+typedef void(^BiLuIAPCompletionHandle)(BiLuIAPResultType type, NSDictionary *data);
+
+
 @interface BiLuVirtualCurrency : NSObject
+
+/**
+ 单例模式
+
+ @return BiLuVirtualCurrency
+ */
++ (instancetype)shareIAPManager;
+
 
 /**
 *    @method    onChargeRequst          虚拟币充值请求
@@ -40,6 +61,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param response 二次验证 返回block
 + (void)appStoreReceipt:(void (^)(NSDictionary *json , NSError * error))response;
 
+
+/// AppStore 内购（带二次验证回调）
+/// @param productID 内购项目的产品ID
+/// @param handle 内购的结果及二次验证回调
+- (void)startIAPWithProductID:(NSString *)productID  completeHandle: (BiLuIAPCompletionHandle)handle;
 @end
 
 NS_ASSUME_NONNULL_END

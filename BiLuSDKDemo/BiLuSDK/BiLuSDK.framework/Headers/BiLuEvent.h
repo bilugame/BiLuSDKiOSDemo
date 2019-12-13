@@ -2,7 +2,7 @@
 //  BiLuEvent.h
 //  BiLuSDKDevDemo
 //
-//  Created by 安金粮 on 2019/10/30.
+//  Created by AJL on 2019/10/30.
 //  Copyright © 2019 mobile. All rights reserved.
 //
 
