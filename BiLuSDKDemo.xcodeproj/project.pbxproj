@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D0D371E23A25B2D00A39BFB /* BiLuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D0D371D23A25B2D00A39BFB /* BiLuSDK.bundle */; };
-		0D0D372D23A3323F00A39BFB /* BiLuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0D372C23A3323F00A39BFB /* BiLuSDK.framework */; };
+		0D0D372F23A33DD800A39BFB /* BiLuSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0D372E23A33DD800A39BFB /* BiLuSDK.framework */; };
 		373B1538235E9FAF00E7DF4F /* UpArpuGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */; };
 		373B1539235E9FAF00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */; };
 		373B153A235E9FAF00E7DF4F /* UpArpuGDTBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */; };
@@ -79,7 +79,7 @@
 
 /* Begin PBXFileReference section */
 		0D0D371D23A25B2D00A39BFB /* BiLuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BiLuSDK.bundle; sourceTree = "<group>"; };
-		0D0D372C23A3323F00A39BFB /* BiLuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BiLuSDK.framework; sourceTree = "<group>"; };
+		0D0D372E23A33DD800A39BFB /* BiLuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BiLuSDK.framework; sourceTree = "<group>"; };
 		373B1535235E9FAE00E7DF4F /* UpArpuGDTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTInterstitialAdapter.framework; sourceTree = "<group>"; };
 		373B1536235E9FAE00E7DF4F /* UpArpuGDTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		373B1537235E9FAE00E7DF4F /* UpArpuGDTBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuGDTBannerAdapter.framework; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		379AC936237A9AEE003E9891 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		379AC938237A9D99003E9891 /* AppStorePay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStorePay.m; sourceTree = "<group>"; };
 		379AC939237A9D99003E9891 /* AppStorePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStorePay.h; sourceTree = "<group>"; };
-		37B0D1E62351A6820034A81A /* BiLuSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiLuSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiLuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0D1E92351A6820034A81A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37B0D1EA2351A6820034A81A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		37B0D1EC2351A6820034A81A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				37EE50832351B488007FB338 /* UpArpuAdmobRewardedVideoAdapter.framework in Frameworks */,
 				37EE507D2351B488007FB338 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */,
 				37B0D2612351A7670034A81A /* SystemConfiguration.framework in Frameworks */,
-				0D0D372D23A3323F00A39BFB /* BiLuSDK.framework in Frameworks */,
+				0D0D372F23A33DD800A39BFB /* BiLuSDK.framework in Frameworks */,
 				37EE50842351B488007FB338 /* UpArpuAdmobBannerAdapter.framework in Frameworks */,
 				37B0D25F2351A7600034A81A /* CoreTelephony.framework in Frameworks */,
 				37EE506F2351B488007FB338 /* MobLinkPro.framework in Frameworks */,
@@ -219,7 +219,7 @@
 		37B0D1E72351A6820034A81A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37B0D1E62351A6820034A81A /* BiLuSDK.app */,
+				37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */,
 				37B0D1FE2351A6830034A81A /* BiLuSDKDemoTests.xctest */,
 			);
 			name = Products;
@@ -280,7 +280,7 @@
 		37EE50422351B488007FB338 /* BiLuSDK */ = {
 			isa = PBXGroup;
 			children = (
-				0D0D372C23A3323F00A39BFB /* BiLuSDK.framework */,
+				0D0D372E23A33DD800A39BFB /* BiLuSDK.framework */,
 				0D0D371D23A25B2D00A39BFB /* BiLuSDK.bundle */,
 				37EE50442351B488007FB338 /* ShareSupport */,
 				37EE50522351B488007FB338 /* AdsSDK */,
@@ -391,7 +391,7 @@
 			);
 			name = BiLuSDKDemo;
 			productName = BiLuSDKDemo;
-			productReference = 37B0D1E62351A6820034A81A /* BiLuSDK.app */;
+			productReference = 37B0D1E62351A6820034A81A /* BiLuSDKDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37B0D1FD2351A6830034A81A /* BiLuSDKDemoTests */ = {
@@ -643,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC39248354;
 				ENABLE_BITCODE = NO;
@@ -668,8 +669,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pet.cm.all;
-				PRODUCT_NAME = BiLuSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bilu.appAdhoc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -678,6 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC39248354;
 				ENABLE_BITCODE = NO;
@@ -703,8 +706,9 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pet.cm.all;
-				PRODUCT_NAME = BiLuSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bilu.appAdhoc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

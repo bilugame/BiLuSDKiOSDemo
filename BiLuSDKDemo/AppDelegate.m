@@ -40,8 +40,6 @@
 //
     [BiLuSDKManager registerViewWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
 
-
-
     }];
 
     return YES;
