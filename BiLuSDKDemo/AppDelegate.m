@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import <BiLuSDK/BiLuSDK.h>
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController * root = [[ViewController alloc]init];
+    self.window.rootViewController = root;
+    [self.window makeKeyAndVisible];
 
     BiLuConfiguration *configuration = [BiLuConfiguration configuration];
 
@@ -32,12 +36,13 @@
 //    [BiLuSDKManager registerWithAppID:@"e4da3b7fbbce2345" appKey:@"9046e6e901fc87a3e6faec3907d07805" configuration:configuration];
 
     //正式服
-    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration];
+//    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration];
 //
-//    [BiLuSDKManager registerWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
-//
-//        
-//    }];
+    [BiLuSDKManager registerViewWithAppID:@"66c7c15dacf008d8" appKey:@"7794001eb60d202c705e0dd3dda6b819" configuration:configuration block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
+
+
+
+    }];
 
     return YES;
 }

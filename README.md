@@ -4,6 +4,7 @@
   * 1.1 [支持的广告类型](#1.1、支持的广告类型)
   * 1.2 [支持的分享类型](#1.2、支持的分享类型)
   * 1.3 [支持用户系统](#1.3、支持用户系统)
+  * 1.4 [用户真实性验证](#1.4、用户真实性验证)
 * [2、配置](#2、配置)
   * 2.1 [基础配置](#2.1、基础配置)
   * 2.2 [导入基础核心框架](#2.2、导入基础核心框架)
@@ -11,6 +12,7 @@
   * 2.4 [配置 Build Settings 和 Info.plist](#2.4、配置&nbsp;Build&nbsp;Settings&nbsp;和&nbsp;Info.plist)
   * 2.5 [初始化SDK](#2.5、初始化SDK)
   * 2.6 [带用户系统的初始化SDK](#2.6、带用户系统的初始化SDK)
+  * 2.7 [带用登录界面的用户系统的初始化SDK（推荐使用）](#2.7、带用登录界面的用户系统的初始化SDK（推荐使用）)
 * [3、分享](#3、分享)
   * 3.1 [配置分享](#3.1、配置分享)
   * 3.2 [带UI的分享](#3.2、带UI的分享)
@@ -36,7 +38,9 @@
 * [8、高级-自定义事件](#8、高级-自定义事件)
   * 8.1 [用途和用法](#8.1、用途和用法)
   * 8.2 [接口及参数](#8.2、接口及参数)
-
+* [9、基础-苹果内购](#9、基础-苹果内购)
+  * 9.1 [内购调用](#9.1、内购调用（带二次验证回调）)
+  * 9.2 [服务器验证](#9.2、服务器验证)
 
 
 ## 1、简介
@@ -46,7 +50,18 @@ BiLuSDK支持激励视频广告(rewardVideo)，banner广告和插屏广告(inter
 ### 1.2、支持的分享类型
 BiLuSDK支持微信好友和微信朋友圈分享，QQ好友和QQ空间分享。
 ### 1.3、支持用户系统
-BiLuSDK支持Game Center 和游客模式 生成用户系统。
+BiLuSDK支持手机号、账号密码和游客模式(包含gamecenter) 生成用户系统。
+
+用户参数介绍：
+<pre><code>
+/// 用户昵称
+@property(nonatomic, copy) NSString *alias;
+/// 用户id
+@property(nonatomic, copy) NSString *playerID;
+//登录注册回调消息（带注册界面的SDK初始化使用，其他忽略）
+@property(nonatomic, copy) NSString *registerCode;
+
+</code></pre>
 
 
 ## 2、配置 
@@ -58,7 +73,7 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 核心模块包含以下框架和资源包文件，只需将它们拖放到Xcode中。
 
 - BiLuSDK.framework
-
+- BiLuSDK.bundle
 
 **注:** 由于**BiLuSDK**暂时不支持cocoapod
 
@@ -181,6 +196,25 @@ BiLuSDK支持Game Center 和游客模式 生成用户系统。
 
     return YES;
 }</code></pre>
+
+
+### 2.7、带用登录界面的用户系统的初始化SDK（推荐使用）
+
+您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**BiLuSDK**(必须在设置根控制器rootViewController后去初始化SDK)：
+<pre><code>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
+    BiLuConfiguration *configuration = [BiLuConfiguration configuration];
+    [BiLuSDKManager registerViewWithAppID:@"哔噜AppId" appKey:@"哔噜AppKey" configuration:nil block:^(BiLuPlayer * _Nonnull player, NSError * _Nonnull error) {
+
+    }];
+
+    return YES;
+}
+</code></pre>
+
+### 1.4、用户真实性验证
+[用户真实性验证说明](Server_user.md)
 
 ## 3、分享
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
@@ -671,3 +705,27 @@ if ([[BiLuAdsManager sharedInstance] bannerAdReadyForPlacementId:@"广告位Id"]
 |eventId	|NSString	|自定义事件名称，最多支持 32 个字符。仅限使用中英文字符、数字和下划线，不要加空格或其他的转义字符|
 |key	|NSString	|自定义事件参数名称，最多支持 32 个字符|
 |NSDictionary	|NSString<br>NSNumber | key 类型必须是 NSString，一次事件最多只支持 50 个参数。如果 value 为 NSString，Game Analytics 会统计每种 value 出现的次数；如果为 NSNumber 类型，那么 Game  Analytics 会统计 value 的总和|
+
+## 9、基础-苹果内购
+### 9.1、内购调用（带二次验证回调）
+接口：(BiLuVirtualCurrency 类)
+<pre><code>
+typedef NS_ENUM(NSUInteger,BiLuIAPResultType) {
+    BiLuIAPResultSuccess = 0,       // 购买成功
+    BiLuIAPResultFailed = 1,        // 购买失败
+    BiLuIAPResultCancle = 2,        // 取消购买
+    BiLuIAPResultVerFailed = 3,     // 订单校验失败
+    BiLuIAPResultVerSuccess = 4,    // 订单校验成功
+    BiLuIAPResultNotArrow = 5,      // 不允许内购
+    BiLuIAPResultIDError = 6,       // 项目ID错误或不存在此项目
+};
+
+//内购方法
+[[BiLuVirtualCurrency shareIAPManager] startIAPWithProductID:@"商品ID" completeHandle:^(BiLuIAPResultType type, NSDictionary * _Nonnull data) {
+     //type：内购结果
+     //data ：二次验证结果
+}];
+</code></pre>
+
+### 9.2、服务器验证
+[服务器IAP内购二次验证说明](Server_auth.md)
