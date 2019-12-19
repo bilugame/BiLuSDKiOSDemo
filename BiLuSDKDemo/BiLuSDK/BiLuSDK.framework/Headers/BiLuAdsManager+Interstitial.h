@@ -10,17 +10,17 @@
 #import "BiLuAdsInterstitialDelegate.h"
 #import <UIKit/UIKit.h>
 
-extern NSString *const kUPArpuInterstitialExtraMediationNameKey;
-extern NSString *const kUPArpuInterstitialExtraUserIDKey;
-extern NSString *const kUPArpuInterstitialExtraUserFeatureKey;
-extern NSString *const kUPArpuInterstitialExtraLocationEnabledFlagKey;
-extern NSString *const kUPArpuInterstitialExtraMuteStartPlayingFlagKey;
-extern NSString *const kUPArpuInterstitialExtraFallbackFullboardBackgroundColorKey;
-extern NSString *const kUPArpuInterstitialExtraAdSizeKey;//Supported by TT interstitial, defaults to 600 X 600
+extern NSString *const kATInterstitialExtraMediationNameKey;
+extern NSString *const kATInterstitialExtraUserIDKey;
+extern NSString *const kATInterstitialExtraUserFeatureKey;
+extern NSString *const kATInterstitialExtraLocationEnabledFlagKey;
+extern NSString *const kATInterstitialExtraMuteStartPlayingFlagKey;
+extern NSString *const kATInterstitialExtraFallbackFullboardBackgroundColorKey;
+extern NSString *const kATInterstitialExtraAdSizeKey;//Supported by TT interstitial, defaults to 600 X 600
 
-extern NSString *const kUPArpuInterstitialExtraAdSize600_400;
-extern NSString *const kUPArpuInterstitialExtraAdSize600_600;
-extern NSString *const kUPArpuInterstitialExtraAdSize600_900;
+extern NSString *const kATInterstitialExtraAdSize600_400;
+extern NSString *const kATInterstitialExtraAdSize600_600;
+extern NSString *const kATInterstitialExtraAdSize600_900;
 
 @interface BiLuAdsManager (Interstitial)
 

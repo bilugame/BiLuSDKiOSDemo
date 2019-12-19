@@ -116,7 +116,7 @@
 - (void)loadBanner:(UIButton *)sender {
 
     CGFloat with = BIScreenWidth;
-    [[BiLuAdsManager sharedInstance] loadADWithPlacementId:@"b5d9c296b43454" extra:@{kUPArpuAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(with, with/6.4)]} type:BiLuAdsTypeBanner delegate:self];
+    [[BiLuAdsManager sharedInstance] loadADWithPlacementId:@"b5d9c296b43454" extra:@{kATAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(with, with/6.4)]} type:BiLuAdsTypeBanner delegate:self];
 
 }
 
@@ -148,7 +148,7 @@
 
     [[self.view viewWithTag:tag] removeFromSuperview];
 
-    UPArpuBannerView *bannerView = [[BiLuAdsManager sharedInstance] retrieveBannerViewForPlacementId:@"b5d9c296b43454" delegate:self];
+    ATBannerView *bannerView = [[BiLuAdsManager sharedInstance] retrieveBannerViewForPlacementId:@"b5d9c296b43454" delegate:self];
     bannerView.translatesAutoresizingMaskIntoConstraints = NO;
     bannerView.tag = tag;
     [self.view addSubview:bannerView];
@@ -195,28 +195,28 @@
 
 #pragma mark - BiluAdBannerDelegate
 
-- (void)bannerView:(UPArpuBannerView *)bannerView didShowAdWithPlacementId:(NSString *)placementId{
+- (void)bannerView:(ATBannerView *)bannerView didShowAdWithPlacementId:(NSString *)placementId{
 
     [self.activityIndicator stopAnimating];
     [self showAlertMessage:[NSString stringWithFormat:@"显示Banner成功 PlacementId:%@",placementId]];
     BILog(@"bannerView didShowAdWithPlacementId",placementId);
 }
-- (void)bannerView:(UPArpuBannerView *)bannerView didClickWithPlacementId:(NSString *)placementId{
+- (void)bannerView:(ATBannerView *)bannerView didClickWithPlacementId:(NSString *)placementId{
 
     [self.activityIndicator stopAnimating];
     BILog(@"bannerView didClickWithPlacementId",placementId);
 }
-- (void)bannerView:(UPArpuBannerView *)bannerView didCloseWithPlacementId:(NSString *)placementId{
+- (void)bannerView:(ATBannerView *)bannerView didCloseWithPlacementId:(NSString *)placementId{
 
     [self.activityIndicator stopAnimating];
     BILog(@"bannerView didCloseWithPlacementId",placementId);
 }
-- (void)bannerView:(UPArpuBannerView *)bannerView didAutoRefreshWithPlacementId:(NSString *)placementId{
+- (void)bannerView:(ATBannerView *)bannerView didAutoRefreshWithPlacementId:(NSString *)placementId{
 
     [self.activityIndicator stopAnimating];
     BILog(@"bannerView didAutoRefreshWithPlacementId",placementId);
 }
-- (void)bannerView:(UPArpuBannerView *)bannerView failedToAutoRefreshWithPlacementId:(NSString *)placementId error:(NSError*)error{
+- (void)bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementId:(NSString *)placementId error:(NSError*)error{
 
     [self.activityIndicator stopAnimating];
     NSLog(@"bannerView failedToAutoRefreshWithPlacementId：%@ error：%@",placementId,error);

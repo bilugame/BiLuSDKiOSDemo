@@ -10,13 +10,13 @@
 #import "BiLuAdsRewardedVideoDelegate.h"
 #import <UIKit/UIKit.h>
 
-extern NSString *const kUPArpuAdLoadingExtraKeywordKey;
-extern NSString *const kUPArpuAdLoadingExtraUserDataKeywordKey;
-extern NSString *const kUPArpuAdLoadingExtraUserIDKey;
-extern NSString *const kUPArpuAdLoadingExtraLocationKey;
+extern NSString *const kATAdLoadingExtraKeywordKey;
+extern NSString *const kATAdLoadingExtraUserDataKeywordKey;
+extern NSString *const kATAdLoadingExtraUserIDKey;
+extern NSString *const kATAdLoadingExtraLocationKey;
 
-extern NSString *const kUPArpuRewardedVideoCallbackExtraAdsourceIDKey;
-extern NSString *const kUPArpuRewardedVideoCallbackExtraNetworkIDKey;
+extern NSString *const kATRewardedVideoCallbackExtraAdsourceIDKey;
+extern NSString *const kATRewardedVideoCallbackExtraNetworkIDKey;
 
 @interface BiLuAdsManager (RewardedVideo)
 

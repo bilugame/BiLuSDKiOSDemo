@@ -10,9 +10,9 @@
 #import "BiLuAdsBannerDelegate.h"
 
 //Supported by Nend banner only
-extern NSString *const kUPArpuBannerLoadingExtraParameters;
-extern NSString *const kUPArpuAdLoadingExtraBannerAdSizeKey;//defaults to 320 * 50
-extern NSString *const kUPArpuAdLoadingExtraBannerSizeAdjustKey;//Currently supported by Nend
+extern NSString *const kATBannerLoadingExtraParameters;
+extern NSString *const kATAdLoadingExtraBannerAdSizeKey;//defaults to 320 * 50
+extern NSString *const kATAdLoadingExtraBannerSizeAdjustKey;//Currently supported by Nend Nend
 
 @interface BiLuAdsManager (Banner)
 
@@ -32,7 +32,7 @@ extern NSString *const kUPArpuAdLoadingExtraBannerSizeAdjustKey;//Currently supp
  @param delegate 回调代理
  @return 如果你尝试为placementId显示Banner广告，如果它还没有准备好，nil将被返回。
  */
-- (UPArpuBannerView *)retrieveBannerViewForPlacementId:(NSString *)placementId delegate:(id<BiLuAdsBannerDelegate>)delegate;
+- (ATBannerView *)retrieveBannerViewForPlacementId:(NSString *)placementId delegate:(id<BiLuAdsBannerDelegate>)delegate;
 
 @end
 

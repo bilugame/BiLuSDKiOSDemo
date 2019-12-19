@@ -5,6 +5,7 @@
 //  Copyright 2011 Google LLC. All rights reserved.
 //
 
+#import <GoogleMobileAds/GADAdValue.h>
 #import <GoogleMobileAds/GADInAppPurchaseDelegate.h>
 #import <GoogleMobileAds/GADInterstitialDelegate.h>
 #import <GoogleMobileAds/GADRequest.h>
@@ -56,6 +57,9 @@
 /// request is in progress or if the latest ad request failed.
 @property(nonatomic, readonly, nullable) GADResponseInfo *responseInfo;
 
+/// Called when the ad is estimated to have earned money. Available for whitelisted accounts only.
+@property(nonatomic, nullable, copy) GADPaidEventHandler paidEventHandler;
+
 /// Presents the interstitial ad which takes over the entire screen until the user dismisses it.
 /// This has no effect unless isReady returns YES and/or the delegate's interstitialDidReceiveAd:
 /// has been received.
@@ -65,6 +69,12 @@
 /// window to show the interstitial and restored when done. After the interstitial has been removed,
 /// the delegate's interstitialDidDismissScreen: will be called.
 - (void)presentFromRootViewController:(nonnull UIViewController *)rootViewController;
+
+/// Returns whether the interstitial can be presented from the provided root view controller. Sets
+/// the error out parameter if the interstitial can't be presented. Must be called on the main
+/// thread.
+- (BOOL)canPresentFromRootViewController:(nonnull UIViewController *)rootViewController
+                                   error:(NSError *_Nullable __autoreleasing *_Nullable)error;
 
 #pragma mark Deprecated
 

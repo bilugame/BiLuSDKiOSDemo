@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-<<<<<<< HEAD
-   uuid = "52C9D759-1545-470D-BDB1-B4F127FDF574"
-=======
-   uuid = "28421BD1-123D-44D3-902E-7804189F8D9B"
->>>>>>> bb67d33e1f9e8bbcd89d316b53645811d101ac18
+   uuid = "E0B71974-0057-4549-87E0-4E075D30506F"
    type = "1"
    version = "2.0">
 </Bucket>

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <UpArpuBanner/UpArpuBanner.h>
+#import <AnyThinkBanner/AnyThinkBanner.h>
 
 @protocol BiLuAdsBannerDelegate <BiLuAdsLoadingDelegate>
 
@@ -19,7 +19,7 @@
  @param bannerView bannerView视图
  @param placementId 广告位Id
  */
-- (void)bannerView:(UPArpuBannerView *)bannerView didShowAdWithPlacementId:(NSString *)placementId;
+- (void)bannerView:(ATBannerView *)bannerView didShowAdWithPlacementId:(NSString *)placementId;
 
 
 /**
@@ -28,7 +28,7 @@
  @param bannerView bannerView视图
  @param placementId 广告位Id
  */
-- (void)bannerView:(UPArpuBannerView *)bannerView didClickWithPlacementId:(NSString *)placementId;
+- (void)bannerView:(ATBannerView *)bannerView didClickWithPlacementId:(NSString *)placementId;
 
 
 /**
@@ -37,7 +37,7 @@
  @param bannerView bannerView视图
  @param placementId 广告位Id
  */
-- (void)bannerView:(UPArpuBannerView *)bannerView didCloseWithPlacementId:(NSString *)placementId;
+- (void)bannerView:(ATBannerView *)bannerView didCloseWithPlacementId:(NSString *)placementId;
 
 
 /**
@@ -46,7 +46,7 @@
  @param bannerView bannerView视图
  @param placementId 广告位Id
  */
-- (void)bannerView:(UPArpuBannerView *)bannerView didAutoRefreshWithPlacementId:(NSString *)placementId;
+- (void)bannerView:(ATBannerView *)bannerView didAutoRefreshWithPlacementId:(NSString *)placementId;
 
 
 /**
@@ -56,7 +56,7 @@
  @param placementId 广告位Id
  @param error 错误信息
  */
-- (void)bannerView:(UPArpuBannerView *)bannerView failedToAutoRefreshWithPlacementId:(NSString *)placementId error:(NSError*)error;
+- (void)bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementId:(NSString *)placementId error:(NSError*)error;
 
 @end
 

@@ -1,6 +1,0 @@
-framework module UpArpuTTInterstitialAdapter {
-  umbrella header "UpArpuTTInterstitialAdapter.h"
-
-  export *
-  module * { export * }
-}
